@@ -26,6 +26,24 @@
             line-height: 1.714;
             padding-top: 20px;
         }
+
+        .contenitore-elenco ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+        }
+
+        .contenitore-elenco ul li {
+            padding-right: 10px;
+         
+        }
+
+        .contenitore-elenco ul li a {
+               text-decoration: none;
+               color: rgba(61,61,61,.8);
+               font-size: 0.6875rem;
+        }
     </style>
     <?php
     $faq = [
@@ -66,17 +84,28 @@
         "domanda" => "Quando faccio clic sui risultati della Ricerca Google, le mie chiavi di ricerca vengono inviate ai siti web?",
         "risposta" => "In alcuni casi sì. Quando fai clic su un risultato della Ricerca Google, il tuo browser web potrebbe reindirizzare alla pagina web di destinazione anche l'indirizzo Internet, o URL, della pagina dei risultati di ricerca sotto forma di URL referrer. Talvolta, l'URL della pagina dei risultati di ricerca potrebbe contenere la query di ricerca che hai inserito. Se utilizzi la ricerca SSL (la funzione di ricerca criptata di Google), nella maggior parte dei casi i termini di ricerca non vengono inviati come parte dell'URL negli URL referrer. Questo comportamento può fare eccezione, ad esempio se utilizzi alcuni browser meno diffusi. Ulteriori informazioni sulla ricerca SSL sono disponibili qui. Le query di ricerca o le informazioni contenute nell'URL referrer potrebbero essere disponibili mediante Google Analytics o un'API (Application Programming Interface). Inoltre, gli inserzionisti potrebbero ricevere informazioni relative all' esatte parole chiave che hanno determinato il clic su un annuncio."
     ],
+
     ];
     
 
     foreach($faq as $item){
         ?>
+
         <h2><?= $item["domanda"] ?></h2>
         <p><?= $item["risposta"] ?></p>
+       
         <?php
     }
 
     ?>
+        <div class="contenitore-elenco">
+            <ul>
+                <li><a href="#">Google</a></li>
+                <li><a href="#">Tutto su Google</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Termini</a></li>
+            </ul>
+        </div>
 
 </body>
 </html>
