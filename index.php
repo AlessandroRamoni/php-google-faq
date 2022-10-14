@@ -92,9 +92,19 @@
         ?>
 
         <h2><?= $item["domanda"] ?></h2>
-        <p><?= $item["risposta"] ?></p>
+        <!-- <p><?= $item["risposta"] ?></p> -->
        
+
+        
         <?php
+             $arrayFaq = explode(".", $item["risposta"]);
+            //  var_dump($arrayFaq);
+             foreach($arrayFaq as $paragrafo){
+                ?>
+                <p><?= $paragrafo ?></p>
+                <?php
+             }
+
     }
 
     ?>
